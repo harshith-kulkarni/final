@@ -1,0 +1,298 @@
+body {
+  margin: 0;
+  background-color: #f5f0e5;
+  font-family: 'Roboto', sans-serif;
+  color: #272b2d;
+  font-size: 16px;
+  line-height: 1.4em;
+   overflow-y: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 400;
+}
+
+h1 {
+  font-family: 'Libre Baskerville', sans-serif;
+  font-size: 45px;
+  line-height: 1.25em;
+  font-style: italic;
+}
+
+h2 {
+  font-family: 'Libre Baskerville', sans-serif;
+  font-size: 38px;
+  line-height: 1.2em;
+  font-style: italic;
+}
+
+h3 {
+  font-family: 'Libre Baskerville', sans-serif;
+  font-size: 26px;
+  line-height: 1.4em;
+  font-style: italic;
+}
+
+p {
+  margin-bottom: 16px;
+  opacity: 0.85;
+  font-size: 15px;
+  line-height: 1.5em;
+  font-weight: 400;
+}
+
+a {
+  color: #5f5b31;
+  text-decoration: none;
+  transition: opacity 200ms ease, color 200ms ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+.section {
+  padding: 80px 25px;
+  background-color: #f5f0e5;
+  overflow-y: auto;
+}
+
+.button {
+  margin-bottom: 16px;
+  border: none;
+  border-radius: 0;
+  background-color: #c6be9e;
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: opacity 200ms ease;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 25px;
+  background-color: transparent;
+  color: black;
+  position: relative;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+.navlink {
+  margin: 0 15px;
+  padding: 5px 0;
+  color: #272b2d;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.navlink:hover {
+  opacity: 0.7;
+}
+
+.footer {
+  padding: 60px 25px;
+  background-color: #fff;
+}
+
+.footer-container {
+  text-align: center;
+}
+
+.footer p {
+  margin-bottom: 0;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 767px) {
+  .section {
+      padding: 40px 25px;
+  }
+
+  h1 {
+      font-size: 36px;
+  }
+
+  h2 {
+      font-size: 32px;
+  }
+
+  .button {
+      padding: 10px;
+  }
+
+  .navlink {
+      font-size: 14px;
+  }
+
+  /* Adjust Flex Direction for Mobile */
+  .content-section {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .content-section.reverse {
+      flex-direction: column;
+  }
+}
+
+/* New Styles for Content Sections */
+.content-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+
+.content-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.content-text, .content-image {
+  flex: 1;
+  padding: 20px;
+}
+
+.content-text h2, .content-text h3 {
+  font-family: 'Libre Baskerville', sans-serif;
+  font-style: italic;
+  margin-bottom: 16px;
+}
+
+.content-text .button {
+  margin-top: 16px;
+}
+
+.content-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Adjust Spacer Heights for Consistency */
+.spacer {
+  height: 32px;
+}
+
+.spacer._48 {
+  height: 48px;
+}
+
+.spacer._64 {
+  height: 64px;
+}
+
+.spacer._128 {
+  height: 128px;
+}
+.nav-dropdown-wrapper {
+    position: relative; /* Ensures the dropdown aligns relative to its wrapper */
+    display: inline-block;
+    margin: 0; /* Removes any extra space */
+}
+
+.nav-dropdown-wrapper .navdropdown {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none; /* Initially hidden */
+    position: absolute; /* Position relative to the wrapper */
+    left: 0; /* Aligns the dropdown to the left side */
+    top: 100%; /* Positions the dropdown below the toggle */
+    background-color:#f5f0e5 ; /* Dropdown background */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 1;
+    width: 200px; /* Optional: Set a fixed width */
+}
+
+.nav-dropdown-wrapper:hover .dropdown-content {
+    display: block; /* Show dropdown on hover */
+}
+
+.dropdown-link {
+    display: block; /* Makes links take the full width */
+    color: #272b2d;
+    text-decoration: none;
+    padding: 8px 12px;
+    font-size: 15px;
+}
+
+.dropdown-link:hover {
+    background-color:#CCC0A1; /* Highlight links on hover */
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  z-index: 1;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+.profile-menu {
+  position: relative; /* Ensures dropdown positions relative to this container */
+  display: inline-block;
+}
+
+.profile-photo {
+  cursor: pointer; /* Optional for better UX */
+}
+
+.dropdown-content {
+  display: none; /* Hidden by default */
+  position: absolute; /* Positions relative to .profile-menu */
+  top: 100%; /* Places dropdown right below the photo */
+  left: 0; /* Aligns dropdown to the left edge of the photo */
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  z-index: 1000; /* Ensures dropdown is above other elements */
+}
+
+.dropdown-content.show {
+  display: block;
+}
+.model{
+  width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f5f0e5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000; /* Change to white for better contrast */
+    margin: 0 auto 15px auto;
+}
+

@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-halsvar-dev-b97cc-authRole",
+      "UnauthRoleArn": "arn:aws:iam::904233099191:role/amplify-halsvar-dev-b97cc-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::904233099191:role/amplify-halsvar-dev-b97cc-authRole",
+      "Region": "eu-north-1",
+      "DeploymentBucketName": "amplify-halsvar-dev-b97cc-deployment",
+      "UnauthRoleName": "amplify-halsvar-dev-b97cc-unauthRole",
+      "StackName": "amplify-halsvar-dev-b97cc",
+      "StackId": "arn:aws:cloudformation:eu-north-1:904233099191:stack/amplify-halsvar-dev-b97cc/255333c0-aa75-11ef-9c7c-069c366a35f7",
+      "AmplifyAppId": "dmbd1umjrrv2d"
+    }
+  }
+}
