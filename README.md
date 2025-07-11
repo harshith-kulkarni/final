@@ -1,1 +1,1 @@
-"# this for reference" 
+"Jwellerry design generator" 
